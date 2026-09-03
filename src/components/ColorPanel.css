@@ -167,6 +167,43 @@
     cursor: pointer;
 }
 
+.derived-color__copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #6b7280;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.derived-color__copy:hover {
+    background: #f3f4f6;
+    border-color: #d1d5db;
+    color: #111827;
+}
+
+.derived-color__copy--copied {
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+    color: #047857;
+}
+
+.derived-color__hex-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    direction: ltr;
+}
+
 .color-field__hex {
     width: 108px;
     padding: 11px 14px;
