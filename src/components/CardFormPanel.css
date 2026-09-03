@@ -102,8 +102,8 @@
   height: 24px;
   flex-shrink: 0;
   background-color: var(--sdk-primary-500);
-  mask: url('/assets/credit-card.svg') center / contain no-repeat;
-  -webkit-mask: url('/assets/credit-card.svg') center / contain no-repeat;
+  mask: var(--asset-credit-card-mask) center / contain no-repeat;
+  -webkit-mask: var(--asset-credit-card-mask) center / contain no-repeat;
 }
 
 .card-form__fields {

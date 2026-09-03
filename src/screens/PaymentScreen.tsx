@@ -4,15 +4,16 @@ import { CountdownTimer } from '../components/CountdownTimer';
 import { OrderSummaryCard } from '../components/OrderSummaryCard';
 import { PaymentMethodTabs } from '../components/PaymentMethodTabs';
 import type { PaymentMethodId } from '../types/paymentMethod';
+import { assetUrl } from '../utils/assetUrl';
 import './PaymentScreen.css';
 
 function StatusBar() {
   return (
     <div className="payment-screen__status-bar">
       <div className="payment-screen__status-icons">
-        <img src="/assets/cellular.svg" alt="" width={19} height={12} />
-        <img src="/assets/wifi.svg" alt="" width={17} height={12} />
-        <img src="/assets/battery.svg" alt="" width={27} height={13} />
+        <img src={assetUrl('assets/cellular.svg')} alt="" width={19} height={12} />
+        <img src={assetUrl('assets/wifi.svg')} alt="" width={17} height={12} />
+        <img src={assetUrl('assets/battery.svg')} alt="" width={27} height={13} />
       </div>
       <span className="payment-screen__time">9:41</span>
     </div>
@@ -69,7 +70,7 @@ export function PaymentScreen({ onPay }: { onPay: (method: PaymentMethodId) => v
 
         <div className="payment-screen__legal">
           {selectedMethod === 'credit-card' && (
-            <img src="/assets/dhamen-logo.svg" alt="dhamen" className="payment-screen__brand" />
+            <img src={assetUrl('assets/dhamen-logo.svg')} alt="dhamen" className="payment-screen__brand" />
           )}
           <div className="payment-card__row">
             <span className="payment-card__label">الرقم الضريبي:</span>
@@ -90,7 +91,7 @@ export function PaymentScreen({ onPay }: { onPay: (method: PaymentMethodId) => v
             <small>شامل ضريبة القيمة المضافة</small>
           </div>
           <div className="payment-screen__amount" dir="ltr">
-            <img src="/assets/riyal.png" alt="" className="payment-screen__riyal" />
+            <img src={assetUrl('assets/riyal.png')} alt="" className="payment-screen__riyal" />
             <strong>710</strong>
           </div>
         </div>
@@ -101,7 +102,7 @@ export function PaymentScreen({ onPay }: { onPay: (method: PaymentMethodId) => v
             className="payment-screen__pay-button payment-screen__pay-button--apple"
             onClick={() => onPay('apple-pay')}
           >
-            <img src="/assets/apple-pay.svg" alt="Apple Pay" className="payment-screen__pay-logo" />
+            <img src={assetUrl('assets/apple-pay.svg')} alt="Apple Pay" className="payment-screen__pay-logo" />
           </button>
         ) : (
           <button

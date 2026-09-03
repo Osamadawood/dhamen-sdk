@@ -1,5 +1,6 @@
 import type { PaymentMethodId } from '../types/paymentMethod';
 import { paymentMethods } from '../types/paymentMethod';
+import { assetUrl } from '../utils/assetUrl';
 import './PaymentMethodTabs.css';
 
 interface PaymentMethodTabsProps {
@@ -24,7 +25,7 @@ export function PaymentMethodTabs({ selected, onSelect }: PaymentMethodTabsProps
           >
             {method.id === 'apple-pay' && (
               <img
-                src="/assets/apple-pay.svg"
+                src={assetUrl('assets/apple-pay.svg')}
                 alt=""
                 className="payment-method__icon payment-method__icon--apple"
               />
@@ -36,7 +37,7 @@ export function PaymentMethodTabs({ selected, onSelect }: PaymentMethodTabsProps
               />
             )}
             {method.id === 'sadad' && (
-              <img src="/assets/sadad.svg" alt="" className="payment-method__icon" />
+              <img src={assetUrl('assets/sadad.svg')} alt="" className="payment-method__icon" />
             )}
             <span>{method.label}</span>
           </button>

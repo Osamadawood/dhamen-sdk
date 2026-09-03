@@ -1,5 +1,6 @@
 import type { PaymentMethodId } from '../types/paymentMethod';
 import { getSuccessPaymentMethodLabel } from '../utils/paymentLabels';
+import { assetUrl } from '../utils/assetUrl';
 import './PaymentScreen.css';
 import '../components/OrderSummaryCard.css';
 import './PaymentSuccessScreen.css';
@@ -15,9 +16,9 @@ function StatusBar() {
   return (
     <div className="payment-screen__status-bar">
       <div className="payment-screen__status-icons">
-        <img src="/assets/cellular.svg" alt="" width={19} height={12} />
-        <img src="/assets/wifi.svg" alt="" width={17} height={12} />
-        <img src="/assets/battery.svg" alt="" width={27} height={13} />
+        <img src={assetUrl('assets/cellular.svg')} alt="" width={19} height={12} />
+        <img src={assetUrl('assets/wifi.svg')} alt="" width={17} height={12} />
+        <img src={assetUrl('assets/battery.svg')} alt="" width={27} height={13} />
       </div>
       <span className="payment-screen__time">9:41</span>
     </div>
@@ -41,7 +42,7 @@ function CopyIcon() {
 function AmountValue({ value, bold = false }: { value: string; bold?: boolean }) {
   return (
     <div className={`payment-success__amount${bold ? ' payment-success__amount--total' : ''}`} dir="ltr">
-      <img src="/assets/riyal.png" alt="" className="payment-success__riyal" />
+      <img src={assetUrl('assets/riyal.png')} alt="" className="payment-success__riyal" />
       {bold ? <strong>{value}</strong> : <span>{value}</span>}
     </div>
   );
@@ -89,7 +90,7 @@ export function PaymentSuccessScreen({ method, onBack }: PaymentSuccessScreenPro
       <main className="payment-success__content">
         <div className="payment-success__receipt">
           <div className="payment-success__badge" aria-hidden="true">
-            <img src="/assets/success-tick.svg" alt="" className="payment-success__badge-icon" />
+            <img src={assetUrl('assets/success-tick.svg')} alt="" className="payment-success__badge-icon" />
           </div>
 
           <article className="payment-success__card">
@@ -116,7 +117,7 @@ export function PaymentSuccessScreen({ method, onBack }: PaymentSuccessScreenPro
                 <div className="payment-success__sadad">
                   <div className="payment-success__sadad-label">
                     <span>رقم</span>
-                    <img src="/assets/sadad.svg" alt="" className="payment-success__sadad-logo" />
+                    <img src={assetUrl('assets/sadad.svg')} alt="" className="payment-success__sadad-logo" />
                   </div>
                   <div className="payment-success__sadad-row" dir="ltr">
                     <button
@@ -154,7 +155,7 @@ export function PaymentSuccessScreen({ method, onBack }: PaymentSuccessScreenPro
         </div>
 
         <div className="payment-success__legal">
-          <img src="/assets/dhamen-logo.svg" alt="dhamen" className="payment-success__brand" />
+          <img src={assetUrl('assets/dhamen-logo.svg')} alt="dhamen" className="payment-success__brand" />
           <div className="payment-card__row">
             <span className="payment-card__label">الرقم الضريبي:</span>
             <span className="payment-card__value">30005658510003</span>

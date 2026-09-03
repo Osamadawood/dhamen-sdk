@@ -1,3 +1,4 @@
+import { assetUrl } from '../utils/assetUrl';
 import './OrderSummaryCard.css';
 
 export function OrderSummaryCard() {
@@ -5,7 +6,7 @@ export function OrderSummaryCard() {
     <article className="payment-card">
       <div className="payment-card__header">
         <h2>سداد</h2>
-        <img src="/assets/tamm-logo.svg" alt="Tamm" className="payment-card__logo" />
+        <img src={assetUrl('assets/tamm-logo.svg')} alt="Tamm" className="payment-card__logo" />
       </div>
       <div className="payment-card__row">
         <span className="payment-card__label">الجهة</span>

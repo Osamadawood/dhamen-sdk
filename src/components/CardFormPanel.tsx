@@ -1,3 +1,4 @@
+import { assetUrl } from '../utils/assetUrl';
 import './CardFormPanel.css';
 
 interface CardFormPanelProps {
@@ -9,12 +10,12 @@ export function CardFormPanel({ onBack }: CardFormPanelProps) {
     <article className="card-form" dir="rtl">
       <div className="card-form__top-row">
         <div className="card-form__networks" dir="ltr">
-          <img src="/assets/payment-icon.svg" alt="" className="card-form__network card-form__network--visa" />
+          <img src={assetUrl('assets/payment-icon.svg')} alt="" className="card-form__network card-form__network--visa" />
           <span className="card-form__network card-form__network--mastercard">
-            <img src="/assets/mastercard.svg" alt="" />
+            <img src={assetUrl('assets/mastercard.svg')} alt="" />
           </span>
           <span className="card-form__network card-form__network--mada">
-            <img src="/assets/mada.svg" alt="" />
+            <img src={assetUrl('assets/mada.svg')} alt="" />
           </span>
         </div>
 
@@ -35,7 +36,7 @@ export function CardFormPanel({ onBack }: CardFormPanelProps) {
             <span className="card-form__required">*</span>
           </span>
           <span className="card-form__input card-form__input--card-number" dir="ltr">
-            <img src="/assets/camera.svg" alt="" className="card-form__camera" />
+            <img src={assetUrl('assets/camera.svg')} alt="" className="card-form__camera" />
             <input type="text" inputMode="numeric" placeholder="1234 - 5678 - 1234 - 5678" />
           </span>
         </label>

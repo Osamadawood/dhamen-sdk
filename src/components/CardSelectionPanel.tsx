@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { assetUrl } from '../utils/assetUrl';
 import './CardSelectionPanel.css';
 
 const savedCards = [
@@ -45,7 +46,7 @@ export function CardSelectionPanel({ onAddNew }: CardSelectionPanelProps) {
                   <span className="saved-card__expiry">{card.expiry}</span>
                 </span>
                 <img
-                  src={`/assets/${card.brand}.svg`}
+                  src={assetUrl(`assets/${card.brand}.svg`)}
                   alt=""
                   className={`saved-card__brand saved-card__brand--${card.brand}`}
                 />
