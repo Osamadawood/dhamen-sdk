@@ -1,0 +1,49 @@
+.credit-card-flow {
+  position: relative;
+  overflow: hidden;
+  border-radius: 13px;
+}
+
+.credit-card-flow__view {
+  width: 100%;
+  transition:
+    transform 0.42s cubic-bezier(0.32, 0.72, 0, 1),
+    opacity 0.32s ease;
+  will-change: transform, opacity;
+}
+
+.credit-card-flow__view--select {
+  transform: translateX(-24%);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.credit-card-flow__view--select.is-active {
+  position: relative;
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.credit-card-flow__view--form {
+  transform: translateX(24%);
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+}
+
+.credit-card-flow__view--form.is-active {
+  position: relative;
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .credit-card-flow__view {
+    transition: none !important;
+  }
+}

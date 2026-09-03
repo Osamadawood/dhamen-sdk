@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-elm);
+  background: #eef0f5;
+  color: #111827;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  font-family: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

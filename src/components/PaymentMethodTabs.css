@@ -1,0 +1,70 @@
+.payment-method-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.payment-method {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px;
+  min-height: 57px;
+  padding: 8px;
+  border: 1px solid var(--sdk-card);
+  border-radius: 6px;
+  background: var(--sdk-card);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
+  color: var(--sdk-primary-500);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: right;
+  cursor: pointer;
+  transition:
+    background-color 0.22s ease,
+    border-color 0.22s ease,
+    color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.18s ease;
+}
+
+.payment-method:hover {
+  transform: translateY(-1px);
+}
+
+.payment-method--active {
+  border-color: var(--sdk-primary-500);
+  background: var(--sdk-primary-500);
+  box-shadow: 0 0 3px var(--sdk-primary-50);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.payment-method__icon {
+  width: 32px;
+  height: 24px;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.payment-method__icon--card {
+  width: 20px;
+  height: 20px;
+  background-color: var(--sdk-primary-400);
+  mask: url('/assets/credit-card.svg') center / contain no-repeat;
+  -webkit-mask: url('/assets/credit-card.svg') center / contain no-repeat;
+}
+
+.payment-method__icon--card-active {
+  background-color: #ffffff;
+}
+
+.payment-method__icon--apple {
+  filter: brightness(0);
+}
+
+.payment-method--active .payment-method__icon--apple {
+  filter: brightness(0) invert(1);
+}

@@ -1,0 +1,160 @@
+.card-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 13px;
+  background: #ffffff;
+}
+
+.card-selection__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-selection__header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--sdk-text-primary);
+  text-align: right;
+}
+
+.card-selection__add {
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--sdk-primary-500);
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    opacity 0.2s ease,
+    transform 0.18s ease;
+}
+
+.card-selection__add:active {
+  transform: scale(0.97);
+}
+
+.card-selection__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.saved-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    transform 0.18s ease,
+    box-shadow 0.22s ease;
+}
+
+.saved-card:hover {
+  transform: translateY(-1px);
+}
+
+.saved-card--selected {
+  border-color: var(--sdk-primary-400);
+  background: var(--sdk-primary-50);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--sdk-primary-400) 35%, transparent);
+}
+
+.saved-card__radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.saved-card__radio-dot {
+  width: 18px;
+  height: 18px;
+  border: 0.5px solid #d1d5db;
+  border-radius: 50%;
+  background: #f9fafb;
+  transition:
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    box-shadow 0.22s ease,
+    transform 0.18s ease;
+}
+
+.saved-card__radio-dot--selected {
+  border-color: var(--sdk-primary-500);
+  background: var(--sdk-primary-500);
+  box-shadow: inset 0 0 0 4px #ffffff;
+  transform: scale(1.05);
+}
+
+.saved-card__details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-inline-start: auto;
+}
+
+.saved-card__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 16px;
+  line-height: 1;
+  text-align: right;
+}
+
+.saved-card__number {
+  font-weight: 400;
+  color: #000000;
+  direction: ltr;
+  unicode-bidi: plaintext;
+}
+
+.saved-card__expiry {
+  margin-top: 2px;
+  font-weight: 300;
+  font-size: 16px;
+  color: var(--sdk-text-muted);
+  direction: ltr;
+  unicode-bidi: plaintext;
+}
+
+.saved-card__brand {
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.saved-card__brand--mastercard {
+  width: 41px;
+  height: 26px;
+}
+
+.saved-card__brand--visa {
+  width: 40px;
+  height: 13px;
+}
+
+.saved-card__brand--mada {
+  width: 39px;
+  height: 13px;
+}

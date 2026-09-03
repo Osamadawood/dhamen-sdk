@@ -1,0 +1,54 @@
+.payment-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 10px;
+  background: var(--sdk-card);
+  box-shadow: 0 1.867px 1.867px rgba(0, 0, 0, 0.05);
+}
+
+.payment-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.payment-card__logo {
+  width: 37px;
+  height: 29px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.payment-card__header h2 {
+  margin: 0;
+  flex: 1;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: right;
+}
+
+.payment-card__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+}
+
+.payment-card__label {
+  flex: 1;
+  color: var(--sdk-text-muted);
+  font-weight: 700;
+  text-align: right;
+}
+
+.payment-card__value {
+  flex: 1;
+  font-weight: 500;
+  text-align: left;
+  color: #000000;
+}
